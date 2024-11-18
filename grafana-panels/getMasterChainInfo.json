@@ -1,0 +1,200 @@
+{
+  "libraryPanel": {
+    "id": 1,
+    "orgId": 1,
+    "folderId": 0,
+    "folderUid": "",
+    "uid": "ee482n9cpzojkd",
+    "name": "getMasterChainInfo response time",
+    "kind": 1,
+    "type": "timeseries",
+    "description": "",
+    "model": {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe45h08yzjls0c"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.4,
+            "drawStyle": "bars",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 4,
+            "pointSize": 12,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.3.0+security-01",
+      "targets": [
+        {
+          "adhocFilters": [],
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe45h08yzjls0c"
+          },
+          "editorMode": "code",
+          "expr": "sum(rate(getMasterchainInfo_time_sum{}[$__rate_interval]) )/sum(rate(getMasterchainInfo_time_count{}[$__rate_interval]) )",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "getMasterchainInfo_time (average)",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "getMasterChainInfo response time",
+      "type": "timeseries"
+    },
+    "version": 2,
+    "meta": {
+      "folderName": "",
+      "folderUid": "",
+      "connectedDashboards": 1,
+      "created": "2024-11-17T14:01:23Z",
+      "updated": "2024-11-17T14:02:38.613142004Z",
+      "createdBy": {
+        "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
+        "id": 1,
+        "name": "admin"
+      },
+      "updatedBy": {
+        "avatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
+        "id": 1,
+        "name": "admin"
+      }
+    }
+  },
+  "id": 1,
+  "type": "timeseries",
+  "title": "getMasterChainInfo response time",
+  "description": "",
+  "gridPos": {
+    "x": 0,
+    "y": 0,
+    "h": 9,
+    "w": 24
+  },
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "drawStyle": "bars",
+        "lineInterpolation": "linear",
+        "barAlignment": 0,
+        "barWidthFactor": 0.4,
+        "lineWidth": 4,
+        "fillOpacity": 0,
+        "gradientMode": "none",
+        "spanNulls": false,
+        "insertNulls": false,
+        "showPoints": "auto",
+        "pointSize": 12,
+        "stacking": {
+          "mode": "none",
+          "group": "A"
+        },
+        "axisPlacement": "auto",
+        "axisLabel": "",
+        "axisColorMode": "text",
+        "axisBorderShow": false,
+        "scaleDistribution": {
+          "type": "linear"
+        },
+        "axisCenteredZero": false,
+        "hideFrom": {
+          "tooltip": false,
+          "viz": false,
+          "legend": false
+        },
+        "thresholdsStyle": {
+          "mode": "off"
+        }
+      },
+      "color": {
+        "mode": "palette-classic"
+      },
+      "thresholds": {
+        "mode": "absolute"
+      }
+    },
+    "overrides": []
+  },
+  "pluginVersion": "11.3.0+security-01",
+  "targets": [
+    null
+  ],
+  "options": {
+    "tooltip": {
+      "mode": "single",
+      "sort": "none"
+    },
+    "legend": {
+      "showLegend": true,
+      "displayMode": "list",
+      "placement": "bottom"
+    }
+  }
+}
